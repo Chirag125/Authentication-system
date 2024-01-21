@@ -1,10 +1,10 @@
-import React, { useEffect,useState} from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-//import { connect } from 'react-redux';
-import { checkAuthenticated, load_user,login } from '../actions/auth';
+import { login } from '../actions/auth';
+import axios from 'axios';
 
-const Login = () => {
+const Login = ({login,isAuthenticated}) => {
    const [formData, setFormData] = useState({
       email: '',
       password: '' 
@@ -19,6 +19,10 @@ const Login = () => {
 
    login(email, password);
 };
+
+//{isAuthenticated ? <Redirect to='/' /> : null}
+
+
 
 return (
    <div className='container mt-5'>
@@ -63,7 +67,7 @@ return (
 };
 
 const mapStateToProps = state => ({
-   //isAuthenticated: state.auth.isAuthenticated
+   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default   connect(null,{login}) (Login);
+export default   connect(mapStateToProps,{login}) (Login);
