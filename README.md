@@ -6,3 +6,12 @@ Backend :Django
 Frontend : React.JS
 DataBase :PostgreSql
 
+
+
+Commands:
+
+python manage.py runserver
+
+React:
+
+npm start
