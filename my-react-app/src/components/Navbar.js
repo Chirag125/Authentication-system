@@ -6,7 +6,7 @@ const Navbar = () => {
         <Fragment>
             <nav className='navbar navbar-expand-lg navbar-light bg-info'>
                 <Link className='navbar-brand' to='/' style={{ fontSize: '24px', fontFamily: 'Arial, sans-serif' }}>
-                    Auth System
+                    Cashflow Coders
                 </Link>
                 <button
                     className='navbar-toggler'
@@ -22,8 +22,8 @@ const Navbar = () => {
                 <div className='collapse navbar-collapse' id='navbarNav'>
                     <ul className='navbar-nav ml-auto'>
                         <li className='nav-item'>
-                            <Link className='nav-link' to='/signup' style={{ fontSize: '18px', fontFamily: 'Arial, sans-serif' }}>
-                                Signup
+                            <Link className='nav-link' to='/dashboard' style={{ fontSize: '18px', fontFamily: 'Arial, sans-serif' }}>
+                                Dashboard
                             </Link>
                         </li>
                         <li className='nav-item'>
